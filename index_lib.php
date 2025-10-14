@@ -1,7 +1,7 @@
 <?php
 
 function admin_verify() {
-    return ($_SERVER['PHP_AUTH_USER'] === "admin" && password_verify("password", password_hash($_SERVER['PHP_AUTH_PW'], PASSWORD_DEFAULT)));
+    return (isset($_SERVER['PHP_AUTH_USER']) && $_SERVER['PHP_AUTH_USER'] === "admin" && password_verify("password", password_hash($_SERVER['PHP_AUTH_PW'], PASSWORD_DEFAULT)));
 }
 
 function view_markdown() {

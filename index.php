@@ -7,10 +7,8 @@ if ($action === "view_md") {
     view_markdown();
 
 } else if ($action === "login") {
-    if (!isset($_SERVER['PHP_AUTH_USER'])) {
+    if (!admin_verify()) {
         send_unauthorized_headers();
-    } else if (!admin_verify()) {
-         send_unauthorized_headers();
     }
     view_markdown();
 
