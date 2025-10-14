@@ -7,7 +7,7 @@
         <li><a href="https://forum.it.altervista.org/">Forum 🇮🇹</a></li>
         <li>
             <a href="?a=login">
-                <?php if (isset($_SERVER['PHP_AUTH_USER'])) { echo $_SERVER['PHP_AUTH_USER']; } else { echo "Login"; } ?>
+                <?php if (isset($_SERVER['PHP_AUTH_USER'])) { echo "@" . $_SERVER['PHP_AUTH_USER']; } else { echo "Login"; } ?>
             </a>
         </li>
     </ul>
