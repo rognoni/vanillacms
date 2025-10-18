@@ -6,6 +6,9 @@ $action = $_GET["a"] ?? "view_md";
 if ($action === "view_md") {
     view_markdown();
 
+} else if ($action === "edit_md") {
+    edit_markdown();
+
 } else if ($action === "login") {
     if (!admin_verify()) {
         send_unauthorized_headers();

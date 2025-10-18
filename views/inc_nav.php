@@ -14,6 +14,7 @@
 </nav>
 <?php if (isset($_SERVER['PHP_AUTH_USER'])) { ?>
 <p>
+    <a href='<?= "?a=edit_md&c={$filepath}" ?>'>📝Edit</a> &nbsp;
     <a href="http://log:out@127.0.0.1/?a=login">👋Logout</a>
     <!-- a href="https://log:out@laravista.altervista.org/VanillaCMS/?a=login">👋Logout</a -->
 </p>
